@@ -1,4 +1,6 @@
 # vue-mart
+一个小型vue项目
+学习课程商品主页和购物车页面
 
 ## Project setup
 ```
