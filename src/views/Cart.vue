@@ -1,21 +1,16 @@
 <template>
   <div>
     购物车
-    <cartinfo :data="cart" @add="onAdd" @reduce="onReduce"></cartinfo>
+    <Cartinfo></Cartinfo>
   </div>
 </template>
 
 <script>
-import cartinfo from "../components/Cartinfo";
+import Cartinfo from "../components/Cartinfo";
+// import {mapState} from "vuex"//把vuex的状态映射到本地
 export default {
-  name: "Cart",
-  data() {
-    return {
-      cart: [],
-    };
-  },
   components: {
-    cartinfo,
+    Cartinfo ,
   },
   mounted () {
    console.log(111);

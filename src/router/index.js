@@ -4,7 +4,6 @@ import home from '../views/Home'
 import cart from '../views/Cart.vue'
 
 Vue.use(VueRouter)
-console.log(222)
 const routes = [
   {
     path: '/',

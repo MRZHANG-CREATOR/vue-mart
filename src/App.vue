@@ -11,12 +11,14 @@
           </el-menu-item>
           <el-menu-item index="3" style="float: right">
             <router-link to="/Cart">
-              <i class="el-icon-shopping-cart-1"></i>
+              <el-badge :value="cartTotal" class="item">
+                <i class="el-icon-shopping-cart-1"></i>
+              </el-badge>
             </router-link>
           </el-menu-item>
         </el-menu>
       </el-header>
-      <router-view/>
+      <router-view />
     </el-container>
   </div>
 </template>
@@ -25,10 +27,13 @@
 import Vue from "vue";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
+import { mapGetters } from "vuex";
 Vue.use(ElementUI);
 export default {
-
-}
+  computed: {
+    ...mapGetters({ cartTotal: "cartTotal" }),
+  },
+};
 </script>
 
 <style>
