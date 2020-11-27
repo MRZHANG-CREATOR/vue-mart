@@ -17,6 +17,9 @@ export default {
   components: {
     cartinfo,
   },
+  mounted () {
+   console.log(111);
+ },
   methods: {
     onAdd(arg) {
       let { index } = arg;

@@ -1,11 +1,9 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    首页
     <el-row>
-      <el-col :span="6" v-for="item in goods" :key="item.id">
+      <el-col :span="6" v-for="item in goods" :key="item.id" style="border:1px solid #eee">
         <el-card> <img :src="item.img" class="image" /> </el-card>
-        <div style="padding: 12px">
+        <div style="padding: 12px;margin:10px">
           <span>{{ item.title }}</span>
           <el-button>
             <i class="cubeic-add"></i>
@@ -25,15 +23,22 @@
 
 <script>
 // @ is an alias to /src
-
-import axios from 'axios'
+import Vue from "vue";
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
+Vue.use(ElementUI);
+import axios from "axios";
 export default {
-  name: 'Home',
-  components: {
-
+  name: "home",
+  data() {
+    return {
+      title: "Course list",
+      goods: [],
+      cart: [],
+    };
   },
-  methods: {
-   async created() {
+
+  async created() {
     let rel = await axios.get("/api/goods");
     this.goods = rel.data.data;
     console.log(rel);
@@ -51,6 +56,5 @@ export default {
       }
     },
   },
-  },
-}
+};
 </script>
