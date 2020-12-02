@@ -6,14 +6,14 @@
         <div style="padding: 12px; margin: 10px">
           <span>{{ item.title }}</span>
 
-          <i class="el-icon-circle-plus" @click="addCart($event, item)"></i>
+          <i class="el-icon-plus" @click="addCart($event, item)"></i>
         </div>
       </el-col>
     </el-row>
     <div class="ball-wrap">
       <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter">
         <div class="ball" v-show="ball.show">
-          <div class="inner"><div class="el-icon-circle-plus"></div></div>
+          <div class="inner"><div class="el-icon-plus"></div></div>
         </div>
       </transition>
     </div>
@@ -88,9 +88,9 @@ export default {
   top: 25px;
   z-index: 200;
   color: red;
-  transition: all 2s linear;
+  transition: all 1s linear;
 }
 .inner {
-  transition: all 2s linear;
+  transition: all 1s linear;
 }
 </style>

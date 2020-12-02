@@ -1,6 +1,5 @@
 <template>
   <div>
-    gouwu
     <table border="0" cellpadding="1" bgcolor="#00CCCC">
       <tr>
         <td>课程名称</td>

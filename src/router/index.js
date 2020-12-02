@@ -20,7 +20,6 @@ const routes = [
     // component: () => import(/* webpackChunkName: "about" */ '../views/Cart.vue')
   }
 ]
-console.log(222)
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
